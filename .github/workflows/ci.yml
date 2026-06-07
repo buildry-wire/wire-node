@@ -18,3 +18,5 @@ jobs:
       - run: npm run typecheck
       - run: npm run test
       - run: npm run build
+      - name: publish dry-run
+        run: npm publish --dry-run --access public
