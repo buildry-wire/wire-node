@@ -26,8 +26,10 @@ jobs:
       - run: npm run typecheck
       - run: npm run test
       - run: npm run build
-      - name: Publish to npm (OIDC + provenance)
+      - name: Publish to npm (one-time token; provenance)
         run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: GitHub Release
         uses: softprops/action-gh-release@v2
         with:
