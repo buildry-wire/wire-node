@@ -3,6 +3,7 @@ export interface PaymentIntent {
   object: "payment_intent";
   amount: number;
   currency: string;
+  description: string;
   status: string;
   client_secret: string;
   automatic_operator: boolean;
@@ -72,6 +73,7 @@ export interface ListParams {
 export interface PaymentIntentCreateParams {
   amount: number;
   currency?: string;
+  description?: string;
   automatic_operator?: boolean;
   allowed_operators?: string[];
   metadata?: Record<string, string>;
