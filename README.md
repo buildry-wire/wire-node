@@ -13,7 +13,7 @@ import { Wire } from "@buildry-wire/wire";
 
 const wire = new Wire("sk_live_...");
 
-const pi = await wire.paymentIntents.create({ amount: 50000, currency: "MNT" }); // minor units
+const pi = await wire.paymentIntents.create({ amount: 50000, currency: "MNT" }); // whole tögrög: 50,000 ₮
 console.log(pi.id, pi.status);
 ```
 
